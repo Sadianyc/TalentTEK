@@ -15,14 +15,13 @@ public class Hook  extends Config {
 
     @Before
     public void openBrowser() {
-        // default code
         if (Strings.isNullOrEmpty(browserType)) {
             browserType = "ch";
         }
         if (Strings.isNullOrEmpty(baseURL)) {
             baseURL = "qa";
         }
-        // main setup
+
         driver = initDriver(browserType);
         switch (baseURL) {
             case "qa":
